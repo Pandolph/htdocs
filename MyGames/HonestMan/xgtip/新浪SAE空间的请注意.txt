@@ -1,0 +1,3 @@
+SAE空间的请把sae-tianapi.php替换成tianapi.php
+文件第四行，$storage = 'mteam';其中mteam换成你的SAE二级域名
+并在“存储与CDN服务-Storage”新建“imgtip”空间即可

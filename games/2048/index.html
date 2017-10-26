@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+  <meta charset="utf-8">
+  <title>2048-微信游戏</title>
+  <link href="http://g.huceo.com/weixin/2048/2048.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/bdtj.js"></script>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="format-detection" content="telephone=no" />
+  <script type="text/javascript" src="http://tajs.qq.com/stats?sId=34915524" charset="UTF-8"></script>
+<script>
+var highestMergedValue = 0;
+function updateShare(bestScore) {
+	imgUrl = 'http://t2.qpic.cn/mblogpic/6cea9ebea2ba031f9b22/460';
+	lineLink = 'http://g.huceo.com/weixin/2048/index.html';
+	descContent = "史上最牛逼的益智游戏！快来挑战我的高分吧！不玩你就OUT啦！";
+	updateShareScore(bestScore);
+	appid = '';
+}
+function updateShareScore(bestScore) {
+	if(bestScore > 0) {
+		shareTitle = "哈哈，我玩《2048》得了" + bestScore +"分, 合出" + highestMergedValue + "！你能赢得过我吗？";
+	}
+	else {
+		shareTitle = "最考验脑力的游戏！你能合出2048吗？";
+	}
+}
+document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+	WeixinJSBridge.call('showOptionMenu');
+});
+</script>
+</head>
+<body>
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">2048微游</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+    <div class="above-game">
+      <a class="restart-button" style="float:left;">重新再来</a>
+      <a class="restart-button" href="http://mp.weixin.qq.com/s?__biz=MzA4Njg1MjkzOA==&mid=200770039&idx=1&sn=a97ee832189c4b1d5eb9947f7e74e7ad#rd" style="float: right;">更多精彩</a>
+	   <a onClick="alert('规则说明：用手指滑动合并相同的数字，例如：2+2=4，4+4=8... 直到1024+1024=2048，即可完成游戏！');" class="restart-button" style="float: right;">游戏规则</a>
+    </div>
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button">继续奋斗</a>
+          <a class="retry-button">再来一次</a>
+          <a class="score-sharing">晒高分</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+      <div class="tile-container">
+      </div>
+    </div>
+  </div>
+  <script src="http://g.huceo.com/weixin/2048/2048.js"></script>
+   <script type="text/javascript">
+    /*game 20:3 创建于 2014-12-09*/
+    var cpro_id = "u1851851";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/cm.js" type="text/javascript"></script>
+</body>
+</html>
